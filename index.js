@@ -10,8 +10,13 @@ app.get('/name',(req,res)=>
   res.send("Pranay")
 })
 app.get('/lcs',(req,res)=>{
-  const l = getlcs("VARUN","ARUN");
-  console.log(l);
+  const {a,b} = res.query;
+  if(!a||!b)
+  {
+    return res.send("Please proveide both Strings");
+  }
+  const ans = getlcs(a,b)
+    return res.send(`result : ${ans}`);
 })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

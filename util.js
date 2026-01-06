@@ -4,7 +4,7 @@ export const getlcs = (req,res)=>
     let a = res.query.str1;
     let b = res.query.str2;
     let n = a.length;
-    let m = a.length;
+    let m = b.length;
     res.send(LCS(a,b,n,m));
 }
 
