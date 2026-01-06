@@ -1,7 +1,11 @@
 export const getlcs = (req,res)=>
 {
     console.log("LCS: ");
-    res.send(LCS())
+    let a = res.query.str1;
+    let b = res.query.str2;
+    let n = a.length;
+    let m = a.length;
+    res.send(LCS(a,b,n,m));
 }
 
 function LCS(str1,str2,n, m)
