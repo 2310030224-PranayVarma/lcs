@@ -7,7 +7,7 @@ app.get('/', (req, res) => {
 })
 app.get('/name',(req,res)=>
 {
-  res.send("Pranay Varma")
+  res.send("Pranay")
 })
 app.get('/lcs',(req,res)=>{
   const l = getlcs("VARUN","ARUN");
