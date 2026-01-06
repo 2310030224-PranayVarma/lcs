@@ -1,5 +1,5 @@
-const express = require('express')
-import { getlcs } from "./util";
+import express from "express"
+import { getlcs } from "./util.js";
 const app = express()
 const port = 3000
 app.get('/', (req, res) => {
@@ -10,7 +10,7 @@ app.get('/name',(req,res)=>
   res.send("Pranay")
 })
 app.get('/lcs',(req,res)=>{
-  const {a,b} = res.query;
+  const {a,b} = req.query;
   if(!a||!b)
   {
     return res.send("Please proveide both Strings");
