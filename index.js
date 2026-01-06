@@ -12,7 +12,6 @@ app.get('/name',(req,res)=>
 app.get('/lcs',(req,res)=>{
   const l = getlcs("VARUN","ARUN");
   console.log(l);
-  res.send(`LCS : ${l}`)
 })
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
